@@ -6,7 +6,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.wassima.leanmass.databinding.ActivityLoginBinding
-import com.wassima.leanmass.ui.calculator.CalculatorActivity
+import com.wassima.leanmass.ui.calculator.CalculatorActivityVB
 
 /**
  * Variante AVEC ViewBinding

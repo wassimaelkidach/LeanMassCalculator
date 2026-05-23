@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.wassima.leanmass.databinding.ActivityCalculatorBinding
 import com.wassima.leanmass.ui.history.HistoryActivityVB
 import java.util.Locale
+import com.wassima.leanmass.R
 
 class CalculatorActivityVB : AppCompatActivity() {
 

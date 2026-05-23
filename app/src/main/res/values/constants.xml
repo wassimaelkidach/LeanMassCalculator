@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="lbm_min_male"
+        format="float" type="dimen">38.0</item>
+    <item name="lbm_min_female"
+        format="float" type="dimen">24.0</item>
+</resources>

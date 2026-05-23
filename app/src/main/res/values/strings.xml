@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LeanMassCalculator</string>
+    <string name="result_satisfactory">Résultat satisfaisant ✓</string>
+    <string name="result_unsatisfactory">Résultat à surveiller ⚠</string>
 </resources>

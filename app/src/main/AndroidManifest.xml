@@ -32,6 +32,18 @@
         <activity android:name=".ui.history.HistoryActivity"
             android:exported="false"/>
 
+        <activity android:name=".ui.auth.LoginActivityVB"
+            android:exported="false"/>
+
+        <activity android:name=".ui.auth.RegisterActivityVB"
+            android:exported="false"/>
+
+        <activity android:name=".ui.calculator.CalculatorActivityVB"
+            android:exported="false"/>
+
+        <activity android:name=".ui.history.HistoryActivityVB"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

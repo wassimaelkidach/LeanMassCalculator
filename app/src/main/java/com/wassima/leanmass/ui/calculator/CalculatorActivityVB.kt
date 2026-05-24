@@ -11,6 +11,7 @@ import com.wassima.leanmass.databinding.ActivityCalculatorBinding
 import com.wassima.leanmass.ui.history.HistoryActivityVB
 import java.util.Locale
 import com.wassima.leanmass.R
+import com.wassima.leanmass.ui.auth.LoginActivityVB
 
 class CalculatorActivityVB : AppCompatActivity() {
 
@@ -50,6 +51,11 @@ class CalculatorActivityVB : AppCompatActivity() {
 
         binding.btnHistory.setOnClickListener {
             startActivity(Intent(this, HistoryActivityVB::class.java))
+        }
+        binding.btnLogout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            startActivity(Intent(this, LoginActivityVB::class.java))
+            finish()
         }
     }
 

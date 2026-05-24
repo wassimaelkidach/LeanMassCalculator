@@ -20,6 +20,7 @@
             android:layout_marginBottom="24dp"/>
 
         <!-- Genre -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,6 +146,15 @@
             android:layout_height="wrap_content"
             android:text="Voir l'historique"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="Déconnexion"
+            android:textColor="#D32F2F" />
 
     </LinearLayout>
 </ScrollView>

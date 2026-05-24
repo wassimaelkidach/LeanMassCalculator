@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.wassima.leanmass.R
 import com.wassima.leanmass.ui.history.HistoryActivity
 import java.util.Locale
+import com.wassima.leanmass.ui.auth.LoginActivity
 
 class CalculatorActivity : AppCompatActivity() {
 
@@ -32,6 +33,8 @@ class CalculatorActivity : AppCompatActivity() {
     private lateinit var tvLBMValue: TextView
     private lateinit var tvResultLabel: TextView
 
+    private lateinit var btnLogout: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculator)
@@ -46,6 +49,7 @@ class CalculatorActivity : AppCompatActivity() {
         ivResultIcon = findViewById(R.id.ivResultIcon)
         tvLBMValue  = findViewById(R.id.tvLBMValue)
         tvResultLabel = findViewById(R.id.tvResultLabel)
+        btnLogout = findViewById(R.id.btnLogout)
 
         setupListeners()
         observeViewModel()
@@ -72,6 +76,12 @@ class CalculatorActivity : AppCompatActivity() {
 
         btnHistory.setOnClickListener {
             startActivity(Intent(this, HistoryActivity::class.java))
+        }
+
+        btnLogout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
     }
 

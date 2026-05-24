@@ -77,11 +77,14 @@
 
     <TextView
         android:id="@+id/tvError"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="#D32F2F"
-        android:textSize="13sp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
         android:visibility="gone"/>
 
 </LinearLayout>

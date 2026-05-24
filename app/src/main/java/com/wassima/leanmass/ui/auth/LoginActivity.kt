@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.wassima.leanmass.R
 import com.wassima.leanmass.ui.calculator.CalculatorActivity
+import android.widget.Toast
 class LoginActivity : AppCompatActivity() {
 
     private val viewModel: AuthViewModel by viewModels()
@@ -68,6 +69,9 @@ class LoginActivity : AppCompatActivity() {
 
         viewModel.errorMessage.observe(this) { error ->
             if (error != null) {
+                // Toast visible immédiatement
+                Toast.makeText(this, error, Toast.LENGTH_LONG).show()
+                // TextView rouge sous les boutons
                 tvError.text       = error
                 tvError.visibility = View.VISIBLE
                 viewModel.clearError()

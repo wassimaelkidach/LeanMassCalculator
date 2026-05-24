@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.wassima.leanmass.R
 import com.wassima.leanmass.ui.calculator.CalculatorActivity
+import android.widget.Toast
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -66,6 +67,7 @@ class RegisterActivity : AppCompatActivity() {
 
         viewModel.errorMessage.observe(this) { error ->
             if (error != null) {
+                Toast.makeText(this, error, Toast.LENGTH_LONG).show()
                 tvError.text       = error
                 tvError.visibility = View.VISIBLE
                 viewModel.clearError()

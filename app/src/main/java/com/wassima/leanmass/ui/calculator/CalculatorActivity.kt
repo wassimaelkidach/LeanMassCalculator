@@ -17,6 +17,7 @@ import com.wassima.leanmass.R
 import com.wassima.leanmass.ui.history.HistoryActivity
 import java.util.Locale
 import com.wassima.leanmass.ui.auth.LoginActivity
+import com.wassima.leanmass.data.repository.PersistenceMode
 
 class CalculatorActivity : AppCompatActivity() {
 
@@ -38,6 +39,8 @@ class CalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculator)
+
+        viewModel.setPersistenceMode(PersistenceMode.CLOUD)
 
         rgGender    = findViewById(R.id.rgGender)
         etWeight    = findViewById(R.id.etWeight)
